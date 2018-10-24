@@ -4,7 +4,7 @@ Top Down 2D Racer
 
 Currently includes:
 - Car physics and collisions
-- Procedural map generation using a variation of a [Cubic Hermite Spline](https://en.wikipedia.org/wiki/Cubic_Hermite_spline#Catmull%E2%80%93Rom_spline)
+- Procedural map generation using a variation of [Cubic Hermite Splines](https://en.wikipedia.org/wiki/Cubic_Hermite_spline#Catmull%E2%80%93Rom_spline) called the Catmull\-Rom Spline
 - Login system
 
 Will include in future versions:
