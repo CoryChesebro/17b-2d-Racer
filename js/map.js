@@ -42,8 +42,8 @@ function getPoint(index) {
 
 function createMap(){
     var gfx = new PIXI.Graphics();
-    var roadTexture = 
-        new PIXI.mesh.Rope(PIXI.Texture.fromImage('/Project/data/assets/MeshTexutres/roadMeshTexture.jpg'), points);
+//     var roadTexture = 
+//         new PIXI.mesh.Rope(PIXI.Texture.fromImage('/Project/data/assets/MeshTexutres/roadMeshTexture.jpg'), points);
     gfx.position.set(0.0);
     
     var mapBounds = new p2.Body({
@@ -218,58 +218,6 @@ function createMap(){
             roadPoints.push(curve[i].point);
         }
         
-        let img = new Image();
-        let roadSections = [];
-        img.src = '/Project/data/assets/MeshTexutres/roadMeshTexture.jpg';
-        if(img.complete){
-            let roadSections = [];
-            for(let i = 0; i < roadPoints.length; i += img.height){
-                if(i + img.width > roadPoints.length){
-                    i = i + img.width - roadPoints.length;
-                    let tempSection = new PIXI.mesh.Rope(
-                                            PIXI.Texture.fromImage(img.src), 
-                                            roadPoints.slice((i, img.width + i)));
-                    roadSections.push(roadSections);
-                    break;
-                }
-                
-                let tempSection = new PIXI.mesh.Rope(
-                                            PIXI.Texture.fromImage(img.src), 
-                                            roadPoints.slice((i, img.height + i)));
-                roadSections.push(roadSections);
-            }
-        }
-        
-        // let roadSections = [];
-        // for(let i = 0; i < roadPoints.length; i += img.height){
-        //     if(i + img.width > roadPoints.length){
-        //         i = i + img.width - roadPoints.length;
-        //         let tempSection = new PIXI.mesh.Rope(
-        //                                 PIXI.Texture.fromImage(img.src), 
-        //                                 roadPoints.slice((i, img.width + i)));
-        //         roadSections.push(tempSection);
-        //         break;
-        //     }
-            
-        //     let tempSection = new PIXI.mesh.Rope(
-        //                                 PIXI.Texture.fromImage(img.src), 
-        //                                 roadPoints.slice((i, img.height + i)));
-        //     roadSections.push(tempSection);
-        // }
-        
-        console.log(roadSections);
-        
-        for(let i = 0; i < roadSections.length; i++){
-            app.stage.addChild(roadSections[i]);
-        }
-        
-        
-        // roadTexture.height = 135;
-        
-        // roadTexture.texture.baseTexture.wrapMode = PIXI.WRAP_MODES.REPEAT;
-        
-        app.stage.addChild(roadTexture);
-        
         gfx.position.set(0.0);
         gfx.lineStyle(5, 0x000000)
         .moveTo(pos1.x, pos1.y)
@@ -278,7 +226,6 @@ function createMap(){
         gfx.lineStyle(5, 0x000000)
         .moveTo(pos3.x, pos3.y)
         .lineTo(pos4.x, pos4.y);
-        
         
     }
     
