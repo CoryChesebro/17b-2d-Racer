@@ -55,6 +55,7 @@ function setup(){
     test.sprite.rotation = test.physics.angle;
     
     requestAnimationFrame(gameLoop);   
+    
  }
 
 main();

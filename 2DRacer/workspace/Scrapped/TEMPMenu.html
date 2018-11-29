@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            /*.wrapper{*/
+            /*    display: inline-block;*/
+            /*    justify-content: left*/
+            /*}*/
+            
+            /*THIS FORMAT MEANS ALL BUTTONS WILL HOLD THIS STYLE
+            REVISE SO THAT BUTTONS ARE ID-SPECIFIC
+            
+            
+            also... make an external style sheet*/
+            
+            .button {
+                display: block;
+                /*padding: 10px 45px;*/
+                font-family: 'Agency FB', sans-serif;
+                justify-content: center;
+                font-size: 40px;
+                width: 120px;
+                color: white;
+                opacity: 0.82;
+            }
+            .button span {
+                cursor: pointer;
+                display: inline-block;
+                position: relative;
+                transition: 0.4s;
+            }
+            .button span:after{
+                content: '\00bb';
+                justify-content: center;
+                position: absolute;
+                opacity: 0;
+                top: 0;    
+                right: 60px; /*flipping the negative controls arrow*/
+                transition: 0.3s;
+            }
+            .button:hover span {
+                font-size: 40px;
+                padding-right: 25px;
+            }
+            .button:hover span:after{
+                opacity: 1;
+                right: 0;
+            }
+            
+            .fill {
+                position: relative;
+                line-height: 50px;
+                background: #67809F;
+                border: none;
+                overflow: hidden;
+                z-index: 1;
+                padding: 0px;
+            }
+            .fill:after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 200%;
+                height: 100%;
+                background: #34495E;
+                opacity: 0.4;
+                z-index: -1;
+                transform-origin: 0% 0%;
+                transform: translateX(calc(-100%)) translateY(0%) rotate(0deg);
+                transition: transform .3s;
+            }
+            .fill:hover::after {
+                
+                transform: translateY(0%) translateX(-50%) rotate(0deg);
+            }
+            .margin {
+                margin-top: 13px;
+            }
+            
+            /*Button specific CLASSES*/
+            .playButton {
+                width: 166px;
+            }
+            .arsButton {
+                width: 150px;
+            }
+            .settButton {
+                width: 140px;
+            }
+        </style>
+    </head>
+    <body>
+        <!--<div class="wrapper">-->
+            <button class = "margin button fill playButton">
+                <span><i><b>Play</b></i></span>
+            </button>
+            <br>
+            <button class = "margin button fill arsButton">
+                <span><i><b>Arsenal</b></i></span>
+            </button>
+            <br>
+            <button class = "margin button fill settButton">
+                <span><i><b>Settings</b></i></span>
+            </button>
+            <br>
+        <!--</div>-->
+    </body>
+</html>

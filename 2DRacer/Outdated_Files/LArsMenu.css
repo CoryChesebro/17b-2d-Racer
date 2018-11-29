@@ -1,0 +1,135 @@
+/*################Menu Div#################*/
+.menu{
+    background: rgb(243,226,199);
+    background: -moz-linear-gradient(top, rgba(243,226,199,1) 0%, rgba(193,158,103,1) 50%, rgba(182,141,76,1) 100%, rgba(233,212,179,1) 100%);
+    background: -webkit-linear-gradient(top, rgba(243,226,199,1) 0%,rgba(193,158,103,1) 50%,rgba(182,141,76,1) 100%,rgba(233,212,179,1) 100%);
+    background: linear-gradient(to bottom, rgba(243,226,199,1) 0%,rgba(193,158,103,1) 50%,rgba(182,141,76,1) 100%,rgba(233,212,179,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3e2c7', endColorstr='#e9d4b3',GradientType=0 );
+    /*background-color: sandybrown;*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 9px solid black;
+ /*   position:fixed;*/
+	width:100%;
+    height:100%;
+}
+.title h1{
+    font-family: 'Agency FB', sans-serif;
+    font-style: italic;
+    font-weight: bolder;
+    justify-content: center;
+    font-size: 65px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0);
+    color: white;
+}
+
+#cars{
+  border: 2px solid black;
+  max-height: 25%;
+  background-size: cover;
+  height: 425px;
+}
+
+#container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+/*################Icon Styling#################*/
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  height: 100px;
+  width: 100px;
+  outline: black;
+  background-size: 100%, 100%;
+  border-radius: 50%;
+  border: none;    /*Able to add "click-able" buttons*/
+  background-image: none;
+}
+.carousel-control-next-icon:after
+{
+  content: '>';
+  font-size: 55px;          /*REMINDER: CHANGE PX TO PERCENTAGES OF CONTAINER*/
+  color: red;
+}                                    
+.carousel-control-prev-icon:after {
+  content: '<';
+  font-size: 55px;
+  color: red;
+}
+.carousel-indicators--round li {
+    border-radius: 10px;
+    margin: 1px 3px;
+    height: 10px;
+    max-width: 10px;
+    border: 2px solid gray;
+    background-color: transparent;
+}
+.carousel-indicators .active {
+    background-color: gray;
+    max-width: 12px;
+    margin: 0 3px;
+    height: 12px;
+}
+/*####################Button Styling#########################*/
+.btn{
+    display: block;
+    font-family: 'Agency FB', sans-serif;
+    font-style: italic;
+    font-weight: bolder;
+    justify-content: flex-start;
+    font-size: 70px;
+    width: 100%;
+    z-index: -1;
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+}
+
+.fill {
+    position: relative;
+    line-height: 100%;
+    background-color: black;
+    overflow: hidden;
+    z-index: -1;
+    opacity: 0.5;
+}
+.fill:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background: black;
+    opacity: 0.9;
+    z-index: -1;
+    transform-origin: 0% 0%;
+    transform: translateX(calc(-100%));
+    transition: transform .25s;
+}
+.fill:hover::after {
+    content: ">";
+    transform: translateX(-50%);
+}
+
+/*#############################################*/
+/*.overlay{*/
+/* position: absolute;*/
+/* display: none;*/
+/* width: 100%;*/
+/* height: 100%;*/
+/* top: 0;*/
+/* left: 0;*/
+/* right: 0;*/
+/* bottom: 0;*/
+/* background-color: rgba(0,0,0,0.5);*/
+/* z-index: 2;*/
+/* cursor: pointer;*/
+/*}*/
+

@@ -23,7 +23,7 @@ var points = [
         {x: 500, y: 570}
     ];
 
-// Almost a circle
+// // Almost a circle
 // var points = [
 //     {x: 80, y: 80},
 //     {x: 50,  y: 150},
@@ -42,9 +42,6 @@ function getPoint(index) {
 
 function createMap(){
     var gfx = new PIXI.Graphics();
-//     var roadTexture = 
-//         new PIXI.mesh.Rope(PIXI.Texture.fromImage('/Project/data/assets/MeshTexutres/roadMeshTexture.jpg'), points);
-    gfx.position.set(0.0);
     
     var mapBounds = new p2.Body({
         mass: 0,
@@ -218,6 +215,10 @@ function createMap(){
             roadPoints.push(curve[i].point);
         }
         
+        var roadTexture = 
+            new PIXI.mesh.Rope(
+                PIXI.Texture.fromImage('/Project/data/assets/MeshTexutres/roadMeshTexture.jpg'), roadPoints);
+        
         gfx.position.set(0.0);
         gfx.lineStyle(5, 0x000000)
         .moveTo(pos1.x, pos1.y)
@@ -231,6 +232,7 @@ function createMap(){
     
     world.addBody(mapBounds);
     app.stage.addChild(gfx);
+    app.stage.addChild(roadTexture);
 }
 
 
